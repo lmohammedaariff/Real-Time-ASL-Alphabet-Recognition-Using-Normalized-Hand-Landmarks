@@ -1,0 +1,9 @@
+# Dataset guide
+
+The training CSV has 63 numeric feature columns (`f0`…`f62`) and a final `label` column. Features are the normalized x/y/z coordinates for landmarks 0–20, flattened in order. Use balanced A–Z labels and capture variation across people, sessions, lighting, and backgrounds. Split design for user-independent claims should group by signer; the current training script's stratified sample split is not user-independent.
+
+The browser collection page captures a still frame and only writes features when explicitly requested. No raw frames are retained. Maintain provenance and consent for any external dataset. Static Sign Language MNIST pixel images cannot be passed directly into this landmark pipeline; they must first be processed through MediaPipe, and some images may not yield a hand detection. Do not mix incompatible raw-pixel and landmark feature spaces.
+
+For interval-based webcam collection, run `python -m src.data.collect_webcam --label A --target 500`. This records a sample only when a hand is detected and the configured interval has elapsed. Repeat with each label, asking the signer to vary pose, distance, orientation, lighting, and session. The collector stores landmarks only. For an existing folder dataset with A–Z subdirectories, `python -m src.data.import_image_dataset --input <dataset-root>` detects hands, appends valid normalized vectors, and prints imported/skipped counts. Review licensing and class balance before training.
+
+The optional public starter import is `python -m src.data.import_huggingface_dataset`. It reads the public Marxulia A–Z split through the Hugging Face datasets-server parquet endpoint, caches its parquet file in ignored `data/raw/`, and writes only landmark vectors to CSV. The public dataset card currently does not show an explicit license, so retain the generated provenance report and verify permissions before publishing derived data or results.

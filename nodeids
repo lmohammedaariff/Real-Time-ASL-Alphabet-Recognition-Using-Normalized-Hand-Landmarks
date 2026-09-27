@@ -1,0 +1,13 @@
+[
+  "tests/test_collection.py::test_find_images_only_in_a_to_z_class_folders",
+  "tests/test_collection.py::test_image_discovery_requires_existing_root",
+  "tests/test_collection.py::test_webcam_collector_reports_missing_camera",
+  "tests/test_dataset.py::test_collector_rejects_bad_label",
+  "tests/test_dataset.py::test_dataset_validation",
+  "tests/test_landmarks.py::test_invalid_landmarks_rejected",
+  "tests/test_landmarks.py::test_normalize_shape_translation_and_scale_invariant",
+  "tests/test_prediction.py::test_low_confidence_resets",
+  "tests/test_prediction.py::test_smoothing_requires_stable_votes",
+  "tests/test_word_builder.py::test_invalid_letter",
+  "tests/test_word_builder.py::test_word_builder_cooldown_and_controls"
+]

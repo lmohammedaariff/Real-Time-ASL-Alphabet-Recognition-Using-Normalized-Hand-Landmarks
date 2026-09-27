@@ -1,0 +1,5 @@
+2026-09-27 16:27:28,624 INFO signvision.training: Training Logistic Regression
+2026-09-27 16:27:30,650 INFO signvision.training: Training SVM
+2026-09-27 16:27:38,191 INFO signvision.training: Training Random Forest
+2026-09-27 16:27:42,694 INFO signvision.training: Training MLP
+2026-09-27 16:27:47,664 INFO signvision.training: Best model: SVM

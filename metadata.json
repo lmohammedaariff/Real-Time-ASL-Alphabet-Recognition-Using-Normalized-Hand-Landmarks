@@ -1,0 +1,73 @@
+{
+  "best_model": "SVM",
+  "labels": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z"
+  ],
+  "samples": 8333,
+  "features": 63,
+  "random_state": 42,
+  "test_fraction": 0.2,
+  "comparison": [
+    {
+      "model": "Logistic Regression",
+      "accuracy": 0.8134373125374925,
+      "precision": 0.813792540496212,
+      "recall": 0.8128453051891735,
+      "f1_score": 0.8116942788828384,
+      "training_time": 0.9370678000268526,
+      "inference_time": 1.2281943902029166e-06
+    },
+    {
+      "model": "SVM",
+      "accuracy": 0.8962207558488302,
+      "precision": 0.8956532782318111,
+      "recall": 0.8946309087184728,
+      "f1_score": 0.8941382429449174,
+      "training_time": 5.763785099959932,
+      "inference_time": 0.00044639993999650603
+    },
+    {
+      "model": "Random Forest",
+      "accuracy": 0.8740251949610078,
+      "precision": 0.8751880957346703,
+      "recall": 0.8726585007051124,
+      "f1_score": 0.8722170582689892,
+      "training_time": 3.473067099985201,
+      "inference_time": 4.184673067230349e-05
+    },
+    {
+      "model": "MLP",
+      "accuracy": 0.8956208758248351,
+      "precision": 0.8962551788419416,
+      "recall": 0.8941030409116016,
+      "f1_score": 0.8940789397542823,
+      "training_time": 3.2839037000085227,
+      "inference_time": 2.970665860328942e-06
+    }
+  ]
+}
